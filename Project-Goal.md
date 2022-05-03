@@ -8,7 +8,7 @@ mark the `[-]` on development, `[x]` for done
 - [ ] isalnum
 - [ ] isascii
 - [ ] isprint
-- [ ] strlen
+- [-] strlen
 - [ ] memset
 - [ ] bzero
 - [ ] memcpy
