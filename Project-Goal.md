@@ -3,11 +3,11 @@
 For setting those projects:
 mark the `[-]` on development, `[x]` for done
 
-- [ ] isalpha
-- [ ] isdigit
-- [ ] isalnum
-- [ ] isascii
-- [ ] isprint
+- [x] isalpha
+- [x] isdigit
+- [x] isalnum
+- [] isascii
+- [x] isprint
 - [ ] strlen
 - [ ] memset
 - [ ] bzero
