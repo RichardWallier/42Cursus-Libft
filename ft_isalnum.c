@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 15:45:52 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/03 16:07:05 by vsergio          ###   ########.fr       */
+/*   Created: 2022/05/03 13:51:40 by vsergio           #+#    #+#             */
+/*   Updated: 2022/05/03 15:08:06 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include <stdio.h>
 #include <ctype.h>*/
 
-int	ft_isprint(int c)
+int	ft_isalnum(int a)
 {
-	if (c >= 32 && c <= 126)
+	if ((a >= '0' && a <= '9') || (a >= 'A' && a <= 'Z')
+		|| (a >= 'a' && a <= 'z'))
 	{
 		return (1);
 	}
@@ -27,9 +28,9 @@ int	ft_isprint(int c)
 
 /*int	main(void)
 {
-	char	letter;
+	int	value;
 
-	letter = '\n';
-	printf("Resultado funcao criada: %d\n", ft_isprint(letter));
-	printf("Resultado funcao original: %d\n", isprint(letter));
+	value = 'a';
+	printf("Resultado funcao criada: %d\n", ft_isalnum(value));
+	printf("Resultado funcao original: %d", ft_isalnum(value));
 }*/
