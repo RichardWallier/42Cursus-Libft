@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/04 12:50:19 by vsergio          ###   ########.fr       */
+/*   Created: 2022/05/04 10:32:36 by vsergio           #+#    #+#             */
+/*   Updated: 2022/05/04 12:49:14 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+//#include <stdio.h>
+//#include <string.h>
+//#include <strings.h>
 
-int		ft_isalpha(int a);
+#include "libft.h"
 
-int		ft_isdigit(int a);
+void	ft_bzero(void *dest, unsigned int len)
+{
+	unsigned char	*ptr;
 
-int		ft_isalnum(int a);
+	ptr = dest;
+	while (len-- > 0)
+		*ptr++ = '0';
+}
 
-int		ft_isascii(char c);
+/*int main () {
+   char str[] = "paralelepipedo\n";
+    printf("%s", str);
 
-int		ft_isprint(int c);
 
-void	ft_bzero(void *dest, size_t len);
+	ft_bzero(str, 5);
+	printf("%s", str);
 
-#endif
+	bzero(str, 5);
+	printf("%s", str);
+}*/
