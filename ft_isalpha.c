@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <ctype.h>*/
+#include "libft.h"
 
 int	ft_isalpha(int a)
 {
@@ -25,7 +24,9 @@ int	ft_isalpha(int a)
 	}
 }
 
-/*int main(void)
+#include <ctype.h>
+#include <stdio.h>
+int main(void)
 {
 	int number;
 	char letter;
@@ -35,4 +36,4 @@ int	ft_isalpha(int a)
 
 	printf("Resultado funcao criada: %d\n", ft_isalpha(letter));
 	printf("Resultado funcao original: %d", isalpha(number));
-}*/
+}
