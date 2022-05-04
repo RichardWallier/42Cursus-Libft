@@ -5,10 +5,10 @@ mark the `[-]` on development, `[x]` for done
 
 - [x] isalpha
 - [x] isdigit
-- [ ] isalnum
-- [ ] isascii
-- [ ] isprint
-- [ ] strlen
+- [x] isalnum
+- [x] isascii
+- [x] isprint
+- [x] strlen
 - [ ] memset
 - [-] bzero
 - [ ] memcpy
