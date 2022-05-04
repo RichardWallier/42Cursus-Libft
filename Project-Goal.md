@@ -6,11 +6,11 @@ mark the `[-]` on development, `[x]` for done
 - [x] isalpha
 - [x] isdigit
 - [x] isalnum
-- [ ] isascii
+- [x] isascii
 - [x] isprint
-- [ ] strlen
+- [x] strlen
 - [ ] memset
-- [-] bzero
+- [x] bzero
 - [ ] memcpy
 - [ ] memmove
 - [ ] strlcpy
