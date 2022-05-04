@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/04 13:16:47 by vsergio          ###   ########.fr       */
-/*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
+/*   Created: 2022/05/04 10:32:36 by vsergio           #+#    #+#             */
+/*   Updated: 2022/05/04 14:35:02 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-#define LIBFT_H
+#include "libft.h"
 
-#include <stdlib.h>
-#include <unistd.h>
+void	ft_bzero(void *dest, size_t len)
+{
+	unsigned char	*ptr;
 
-int ft_isalpha(int a);
-
-int ft_isalpha(int a);
-
-int ft_isdigit(int a);
-
-int ft_isalnum(int a);
-
-int ft_isascii(char c);
-
-int ft_isprint(int c);
-
-void ft_bzero(void *dest, size_t len);
-
-#endif
+	ptr = dest;
+	while (len-- > 0)
+		*ptr++ = '\0';
+}
