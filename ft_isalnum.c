@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <ctype.h>*/
+#include "libft.h"
 
 int	ft_isalnum(int a)
 {
@@ -26,11 +25,3 @@ int	ft_isalnum(int a)
 	}
 }
 
-/*int	main(void)
-{
-	int	value;
-
-	value = 'a';
-	printf("Resultado funcao criada: %d\n", ft_isalnum(value));
-	printf("Resultado funcao original: %d", ft_isalnum(value));
-}*/
