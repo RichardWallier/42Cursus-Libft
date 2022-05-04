@@ -5,9 +5,9 @@ mark the `[-]` on development, `[x]` for done
 
 - [x] isalpha
 - [x] isdigit
-- [x] isalnum
+- [ ] isalnum
 - [ ] isascii
-- [x] isprint
+- [ ] isprint
 - [ ] strlen
 - [ ] memset
 - [-] bzero
