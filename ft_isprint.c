@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <ctype.h>*/
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -24,12 +23,3 @@ int	ft_isprint(int c)
 		return (0);
 	}
 }
-
-/*int	main(void)
-{
-	char	letter;
-
-	letter = '\n';
-	printf("Resultado funcao criada: %d\n", ft_isprint(letter));
-	printf("Resultado funcao original: %d\n", isprint(letter));
-}*/
