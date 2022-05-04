@@ -12,23 +12,25 @@
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-int ft_isalpha(int a);
+int		ft_isalpha(int a);
 
-int ft_isalpha(int a);
+int		ft_isdigit(int a);
 
-int ft_isdigit(int a);
+int		ft_isalnum(int a);
 
-int ft_isalnum(int a);
+int		ft_isascii(char c);
 
-int ft_isascii(char c);
+int		ft_isprint(int c);
 
-int ft_isprint(int c);
+size_t	ft_strlen(char *str);
 
-void ft_bzero(void *dest, size_t len);
+void	*ft_memset(void *dest, int c, unsigned int offset);
+
+void	ft_bzero(void *dest, size_t len);
 
 #endif
