@@ -10,7 +10,7 @@ mark the `[-]` on development, `[x]` for done
 - [x] isprint
 - [x] strlen
 - [ ] memset
-- [-] bzero
+- [x] bzero
 - [ ] memcpy
 - [ ] memmove
 - [ ] strlcpy
