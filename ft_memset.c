@@ -4,7 +4,7 @@ void	*ft_memset(void *dest, int c, unsigned int offset)
 {
 	unsigned char	*pointer;
 
-	pointer = malloc(ft_strlen(dest) * sizeof(char));
+	pointer = dest;
 	while (offset-- > 0)
 		*pointer++ = c;
 	return (dest);
