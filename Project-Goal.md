@@ -6,17 +6,11 @@ mark the `[-]` on development, `[x]` for done
 - [x] isalpha
 - [x] isdigit
 - [x] isalnum
-- [] isascii
+- [x] isascii
 - [x] isprint
-- [ ] strlen
-- [ ] isalpha
-- [ ] isdigit
-- [ ] isalnum
-- [ ] isascii
-- [ ] isprint
-- [-] strlen
+- [x] strlen
 - [ ] memset
-- [-] bzero
+- [x] bzero
 - [ ] memcpy
 - [ ] memmove
 - [ ] strlcpy
@@ -27,7 +21,7 @@ mark the `[-]` on development, `[x]` for done
 - [ ] memchr
 - [ ] memcmp
 - [ ] strnstr
-- [ ] atoi
+- [-] atoi
 - [ ] calloc
 - [ ] strdup
 

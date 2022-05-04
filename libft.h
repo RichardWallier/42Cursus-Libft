@@ -6,7 +6,11 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/05/04 13:16:47 by vsergio          ###   ########.fr       */
+=======
+/*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
+>>>>>>> main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +19,11 @@
 
 #include <stdlib.h>
 #include <unistd.h>
+<<<<<<< HEAD
+=======
+
+int	ft_isalpha(int a);
+>>>>>>> main
 
 int		ft_isalpha(int a);
 
