@@ -23,17 +23,3 @@ int	ft_isalpha(int a)
 		return (0);
 	}
 }
-
-#include <ctype.h>
-#include <stdio.h>
-int main(void)
-{
-	int number;
-	char letter;
-
-	number = 10;
-	letter = 'A';
-
-	printf("Resultado funcao criada: %d\n", ft_isalpha(letter));
-	printf("Resultado funcao original: %d", isalpha(number));
-}
