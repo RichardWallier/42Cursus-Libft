@@ -1,16 +1,16 @@
 # Those are the project goals for the libft project
 
 For setting those projects:
-mark the `[-]` on development, `[x]` for done
+mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 
-- [x] isalpha
-- [x] isdigit
-- [x] isalnum
-- [x] isascii
-- [x] isprint
-- [x] strlen
-- [x] memset
-- [x] bzero
+- [V] isalpha
+- [V] isdigit
+- [V] isalnum
+- [V] isascii
+- [V] isprint
+- [V] strlen
+- [V] memset
+- [V] bzero
 - [ ] memcpy
 - [ ] memmove
 - [-] strlcpy
@@ -21,7 +21,7 @@ mark the `[-]` on development, `[x]` for done
 - [ ] memchr
 - [ ] memcmp
 - [ ] strnstr
-- [-] atoi
+- [O] atoi (review)
 - [ ] calloc
 - [ ] strdup
 
