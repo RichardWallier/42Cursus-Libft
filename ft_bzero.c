@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 10:32:36 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/04 13:16:19 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/04 14:35:02 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_bzero(void *dest, size_t len)
 
 	ptr = dest;
 	while (len-- > 0)
-		*ptr++ = '0';
+		*ptr++ = '\0';
 }
