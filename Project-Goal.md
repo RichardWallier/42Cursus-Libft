@@ -6,7 +6,7 @@ mark the `[-]` on development, `[x]` for done
 - [x] isalpha
 - [x] isdigit
 - [x] isalnum
-- [] isascii
+- [ ] isascii
 - [x] isprint
 - [ ] strlen
 - [ ] isalpha
@@ -27,7 +27,7 @@ mark the `[-]` on development, `[x]` for done
 - [ ] memchr
 - [ ] memcmp
 - [ ] strnstr
-- [ ] atoi
+- [-] atoi
 - [ ] calloc
 - [ ] strdup
 
