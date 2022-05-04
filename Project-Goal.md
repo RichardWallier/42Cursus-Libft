@@ -9,11 +9,11 @@ mark the `[-]` on development, `[x]` for done
 - [x] isascii
 - [x] isprint
 - [x] strlen
-- [ ] memset
+- [x] memset
 - [x] bzero
 - [ ] memcpy
 - [ ] memmove
-- [ ] strlcpy
+- [-] strlcpy
 - [ ] strlcat
 - [ ] toupper
 - [ ] strchr
