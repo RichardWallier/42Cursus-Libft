@@ -16,7 +16,7 @@
 
 int main(void) {
 
-  char *to_convert = " lasds lkdsjfadklsjf\n -2333";
+  char *to_convert = "\t\v\n-2333";
   int number;
 
   number = atoi(to_convert);
