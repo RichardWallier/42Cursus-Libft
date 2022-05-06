@@ -12,7 +12,7 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [V] memset
 - [V] bzero
 - [V] memcpy
-- [ ] memmove
+- [-] memmove
 - [-] strlcpy
 - [-] strlcat
 - [-] toupper
