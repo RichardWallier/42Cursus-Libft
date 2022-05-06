@@ -33,4 +33,6 @@ void	*ft_memset(void *dest, int c, unsigned int offset);
 
 void	ft_bzero(void *dest, size_t len);
 
+void	*ft_memcpy(void *dest, void *src, size_t len);
+
 #endif

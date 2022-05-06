@@ -11,7 +11,7 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [V] strlen
 - [V] memset
 - [V] bzero
-- [-] memcpy
+- [V] memcpy
 - [ ] memmove
 - [-] strlcpy
 - [-] strlcat
