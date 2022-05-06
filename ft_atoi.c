@@ -10,26 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *str) {
-  long int res;
-  int i;
-  int sign;
+int	ft_atoi(char *str)
+{
+	long int	res;
+	int			i;
+	int			sign;
 
-  i = 0;
-  res = 0;
-  sign = 1;
-  while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\r' ||
-         *str == '\v' || *str == '\f')
-    str++;
-  if (*str == '-')
+	i = 0;
+	res = 0;
+	sign = 1;
+	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\r'
+		|| *str == '\v' || *str == '\f')
+		str++;
+	if (*str == '-')
 	{
 		sign = -1;
 		str++;
 	}
-  if (*str == '+')
+	if (*str == '+')
 		str++;
 	while (str[i] >= '0' && str[i] <= '9')
 		res = res * 10 + str[i++] - '0';
 	return (sign * res);
 }
-
