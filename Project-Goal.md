@@ -11,10 +11,10 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [V] strlen
 - [V] memset
 - [V] bzero
-- [ ] memcpy
+- [-] memcpy
 - [ ] memmove
 - [-] strlcpy
-- [ ] strlcat
+- [-] strlcat
 - [ ] toupper
 - [ ] strchr
 - [ ] strrchr
