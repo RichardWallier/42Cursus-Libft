@@ -35,4 +35,6 @@ void	ft_bzero(void *dest, size_t len);
 
 void	*ft_memcpy(void *dest, void *src, size_t len);
 
+int ft_atoi(char *str);
+
 #endif

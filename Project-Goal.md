@@ -21,7 +21,7 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [ ] memchr
 - [ ] memcmp
 - [ ] strnstr
-- [O] atoi (review)
+- [V] atoi (review)
 - [ ] calloc
 - [ ] strdup
 
