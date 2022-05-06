@@ -24,4 +24,5 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [V] atoi (review)
 - [ ] calloc
 - [ ] strdup
+- [-] strncmp
 
