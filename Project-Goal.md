@@ -16,7 +16,7 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [V] strlcpy
 - [-] strlcat
 - [-] toupper
-- [ ] strchr
+- [-] strchr
 - [ ] strrchr
 - [ ] memchr
 - [V] memcmp
