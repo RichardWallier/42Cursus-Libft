@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 02:04:12 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/07 02:05:55 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/07 02:07:00 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	ft_toupper(char c)
 {
-	if (c >= 'a' &&  c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return ((c - 32));
 	return (c);
 }
