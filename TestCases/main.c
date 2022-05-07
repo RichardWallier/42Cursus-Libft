@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../src/libft.h"
 #include <string.h>
 #include <stddef.h>
 #include <stdio.h>
