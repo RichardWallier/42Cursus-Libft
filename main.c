@@ -20,6 +20,7 @@ void ft_test_isalpha(void);
 
 int main(void)
 {
+	printf("Starting tests:\n");
 	ft_test_isalpha();
 	
 }
@@ -35,6 +36,7 @@ void ft_test_isalpha(void)
 			printf("Recived: %d", ft_isalpha(str1[i]));
 		}
 	}
+	printf("ft_isalpha - OK!\n");
 }
 
 // Test ft_isdigit

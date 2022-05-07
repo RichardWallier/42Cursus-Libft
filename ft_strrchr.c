@@ -15,7 +15,7 @@ char *ft_strrchr(const char *s, int c)
 	return (0);
 }
 
-
+/*
 int main()
 {
     char str[] = "teste 42 rio";
@@ -23,3 +23,4 @@ int main()
     printf("%s\n", teste);
     return (1);
 }
+*/
