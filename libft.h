@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/07 02:24:23 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/07 02:40:28 by vsergio          ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -48,5 +48,7 @@ char	ft_toupper(char c);
 char	*ft_strchr(char *str, char c);
 
 char	*ft_strrchr(const char *s, int c);
+
+int		ft_tolower(int arg);
 
 #endif
