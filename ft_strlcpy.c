@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 20:37:02 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/06 20:37:10 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/07 01:53:31 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dest, char *src, size_t destsize)
 {
-	int	index;
+	int		index;
 	size_t	srcsize;
 
 	srcsize = ft_strlen(src);
@@ -26,4 +26,3 @@ size_t	ft_strlcpy(char *dest, char *src, size_t destsize)
 	dest[index] = '\0';
 	return (srcsize);
 }
-
