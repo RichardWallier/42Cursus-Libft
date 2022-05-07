@@ -37,4 +37,6 @@ void	*ft_memcpy(void *dest, void *src, size_t len);
 
 int		ft_atoi(char *str);
 
+char	*ft_strdup(char *s1);
+
 #endif
