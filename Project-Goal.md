@@ -18,7 +18,7 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [-] toupper
 - [O] strchr
 - [O] strrchr
-- [ ] memchr
+- [-] memchr
 - [V] memcmp
 - [-] strnstr
 - [V] atoi (review)
