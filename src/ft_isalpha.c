@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguedes <lguedes@student.42.rio>           +#+  +:+       +#+        */
+/*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/06 21:42:59 by lguedes           #+#    #+#             */
-/*   Updated: 2022/05/06 22:13:20 by gneves           ###   ########.fr       */
+/*   Created: 2022/05/03 11:29:30 by vsergio           #+#    #+#             */
+/*   Updated: 2022/05/06 22:10:11 by gneves           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-
-char *ft_strdup(char *s1)
+int	ft_isalpha(int c)
 {
-	void *new;
-	int len;
-
-	len = ft_strlen(s1);
-	new = (char*)malloc(len * sizeof(char*));
-	if(new == NULL)
-		return (NULL);
-	return (ft_memcpy(new, s1, len));
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

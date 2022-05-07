@@ -11,6 +11,7 @@ char *ft_strchr(const char *s, int c)
 	return (char *)s;
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 int main()
@@ -23,3 +24,4 @@ int main()
 	printf("%s\n", teste);
 	return (1);
 	}
+*/
