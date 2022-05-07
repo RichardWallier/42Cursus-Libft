@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/06 22:58:43 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/07 02:24:23 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -40,5 +40,13 @@ int		ft_atoi(char *str);
 int		ft_memcmp(void *str1, void *str2, size_t size);
 
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
+
+size_t	ft_strlcpy(char *dest, char *src, size_t destsize);
+
+char	ft_toupper(char c);
+
+char	*ft_strchr(char *str, char c);
+
+char	*ft_strrchr(const char *s, int c);
 
 #endif
