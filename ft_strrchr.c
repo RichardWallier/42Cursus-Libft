@@ -15,11 +15,13 @@ char *ft_strrchr(const char *s, int c)
 	return (0);
 }
 
-
+#include <string.h>
 int main()
 {
     char str[] = "teste 42 rio";
     char* teste = ft_strrchr(str, '4');
+    char* teste2 = strrchr(str, '4');
     printf("%s\n", teste);
+    printf("%s\n", teste2);
     return (1);
 }
