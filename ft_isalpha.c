@@ -1,10 +1,11 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD:libft.h
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
 /*   Updated: 2022/05/07 02:24:23 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
@@ -50,3 +51,23 @@ char	*ft_strchr(char *str, char c);
 char	*ft_strrchr(const char *s, int c);
 
 #endif
+=======
+/*   Created: 2022/05/03 11:29:30 by vsergio           #+#    #+#             */
+/*   Updated: 2022/05/03 12:15:12 by vsergio          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isalpha(int a)
+{
+	if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+>>>>>>> origin/ft_isalpha:ft_isalpha.c
