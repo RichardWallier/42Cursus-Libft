@@ -11,10 +11,12 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+
 
 char *strdup(char *s)
 {
-	
 	void *new;
+	
 	return new;
 }
