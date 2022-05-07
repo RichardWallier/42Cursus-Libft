@@ -20,9 +20,9 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [O] strrchr
 - [ ] memchr
 - [V] memcmp
-- [ ] strnstr
+- [-] strnstr
 - [V] atoi (review)
 - [ ] calloc
-- [ ] strdup
-- [-] strncmp
+- [-] strdup
+- [V] strncmp
 
