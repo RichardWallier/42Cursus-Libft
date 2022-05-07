@@ -14,9 +14,14 @@
 #include <stdlib.h>
 
 
-char *ft_strdup(char *s)
+char *ft_strdup(char *s1)
 {
 	void *new;
-	
-	return new;
+	int len;
+
+	len = ft_strlen(s1);
+	new = (char*)malloc(len * sizeof(char*));
+	if(new == NULL)
+		return (NULL);
+	return (ft_memcpy(new, s1, len));
 }
