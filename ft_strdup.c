@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 
-char *strdup(char *s)
+char *ft_strdup(char *s)
 {
 	void *new;
 	
