@@ -16,14 +16,14 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed 
 - [V] strlcpy
 - [-] strlcat
 - [V] toupper
+- [V] tolower
 - [V] strchr
 - [V] strrchr
+- [V] strncmp
 - [-] memchr
 - [V] memcmp
 - [-] strnstr
 - [V] atoi
 - [ ] calloc
 - [-] strdup
-- [V] strncmp
-- [V] tolower
 
