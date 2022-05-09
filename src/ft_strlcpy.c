@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 20:37:02 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/06 22:13:39 by gneves           ###   ########.fr       */
+/*   Updated: 2022/05/09 17:11:45 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ size_t	ft_strlcpy(char *dest, char *src, size_t destsize)
 	dest[index] = '\0';
 	return (srcsize);
 }
-

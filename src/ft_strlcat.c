@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 17:09:21 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/09 17:09:24 by rwallier         ###   ########.fr       */
+/*   Created: 2022/05/09 17:08:42 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/09 17:08:44 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *dest, int c, unsigned int offset)
+size_t	ft_strlcat(char *dest, char *src, size_t maxlen)
 {
-	unsigned char	*pointer;
+	size_t		srclen;
+	size_t		dstlen;
 
-	pointer = dest;
-	while (offset-- > 0)
-		*pointer++ = c;
-	return (dest);
+	srclen = ft_strlen(src);
+	dstlen = ft_strlen(dest);
+	if (dstlen == maxlen)
+		return (maxlen + srclen);
+	ft_memcpy(dest + dstlen, src, 13);
+	dest[maxlen] = '\0';
+	return (srclen + dstlen);
 }

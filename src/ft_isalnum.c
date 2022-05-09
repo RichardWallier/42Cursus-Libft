@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
+/*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/03 13:51:40 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/06 22:09:56 by gneves           ###   ########.fr       */
+/*   Created: 2022/05/09 17:09:45 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/09 17:09:48 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ int	ft_isalnum(int a)
 		return (0);
 	}
 }
-

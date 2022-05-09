@@ -1,27 +1,23 @@
-char *ft_strchr(const char *s, int c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/09 17:12:43 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/09 17:15:23 by rwallier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*ft_strchr(const char *s, int c)
 {
-	char *temp;
+	char	*temp;
 
 	while (*s != c)
 	{
 		if (!*s++)
-			return (char *)'\0';
+			return ((char *) '\0');
 	}
-
-	return (char *)s;
+	return ((char *)s);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char str[] = "teste 42 rio";
-	char* ch = strchr(str, '4');
-	char* teste = ft_strchr(str, '4');
-
-	printf("%s\n", ch);
-	printf("%s\n", teste);
-	return (1);
-	}
-*/
