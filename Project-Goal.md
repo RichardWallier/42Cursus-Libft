@@ -27,3 +27,4 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed 
 - [ ] calloc
 - [-] strdup
 
+- [-] libft.h
