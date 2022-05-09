@@ -6,7 +6,7 @@
 /*   By: gneves <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 01:42:34 by gneves            #+#    #+#             */
-/*   Updated: 2022/05/07 05:43:30 by gneves           ###   ########.fr       */
+/*   Updated: 2022/05/09 17:24:20 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*r;
-	int		sz_temp;
-	int		sz_s;
+	char		*r;
+	size_t		sz_temp;
+	size_t		sz_s;
 
 	r = (char *)malloc(len);
 	sz_temp = 0;

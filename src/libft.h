@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/09 17:15:41 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/09 17:20:32 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -23,7 +23,7 @@ int		ft_isdigit(int a);
 
 int		ft_isalnum(int a);
 
-int		ft_isascii(char c);
+int		ft_isascii(int c);
 
 int		ft_isprint(int c);
 
