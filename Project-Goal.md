@@ -1,7 +1,7 @@
 # Those are the project goals for the libft project
 
 For setting those projects:
-mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
+mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed (norminette + main test`s)
 
 - [V] isalpha
 - [V] isdigit
@@ -21,7 +21,7 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed
 - [-] memchr
 - [V] memcmp
 - [-] strnstr
-- [V] atoi (review)
+- [V] atoi
 - [ ] calloc
 - [-] strdup
 - [V] strncmp
