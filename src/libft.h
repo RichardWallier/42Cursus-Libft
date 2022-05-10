@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:26:12 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/09 22:36:12 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/09 23:55:34 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <stdlib.h>
 
-int		ft_isalpha(int a);
+int		ft_isalpha(int c);
 
 int		ft_isdigit(int a);
 
@@ -27,16 +27,32 @@ int		ft_isprint(int c);
 
 size_t	ft_strlen(const char *str);
 
-void	*ft_memset(void *dest, int c, unsigned int offset);
+void	*ft_memset(void *b, int c, size_t len);
 
-void	ft_bzero(void *dest, size_t len);
+void	ft_bzero(void *s, size_t n);
 
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 
 char	*ft_strdup(char *s1);
 
-char	ft_toupper(char c);
+int		ft_toupper(int c);
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
+
+int		ft_memcmp(const void *str1, const void *str2, size_t n);
+
+char	*ft_strchr(const char *s, int c);
+
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
+
+char	*ft_strrchr(const char *s, int c);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+int		ft_tolower(int c);
 
 #endif
