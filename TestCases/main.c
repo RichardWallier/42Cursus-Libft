@@ -84,7 +84,6 @@ int	ft_test_isascii(void)
 	for (size_t i = 0; i < strlen(str1); i++) {
 		if(ft_isascii(str1[i]) != isascii(str1[i])) {
 			printf("Test Failed on the %zurd char\n", i);
-			printf("Expected: %zu", isascii());
 			printf("Recived: %d", ft_isascii(str1[i]));
 			return (0);
 		}
@@ -94,10 +93,38 @@ int	ft_test_isascii(void)
 }
 
 // Test ft_isprint
+int	ft_test_isprint(void)
+{
+	char *str1 = "lk-_=+=':;\\|\\/?,`~!@#$%ajdf93%$#@%()*&73894lkdjsfsd934";
+	for (size_t i = 0; i < strlen(str1); i++) {
+		if(ft_isprint(str1[i]) != isprint(str1[i])) {
+			printf("Test Failed on the %zurd char\n", i);
+			printf("Recived: %d\n", ft_isprint(str1[i]));
+			return (0);
+		}
+	}
+	printf("ft_isalnum - OK!\n");
+	return (1);
+}
 
 // Test ft_strlen
+int ft_test_strlen(void)
+{
+	char *str1 = "jaksdhjdkdhdlseieur82373@$#@#%";
+
+	if (ft_strlen(str1) != strlen(str1))
+	{
+		printf("Test fail on strlen function: \n");
+		printf("Expected: %zu", strlen(str1));
+		printf("Expected: %zu", strlen(str1));
+		return (0);
+	}
+	printf("ft_strlen - OK!\n");
+	return (1);
+}
 
 // Test ft_memset
+ft_test_memset()
 
 // Test ft_bzero
 
