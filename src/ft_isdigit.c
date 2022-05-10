@@ -6,11 +6,9 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 12:16:09 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/06 22:10:44 by gneves           ###   ########.fr       */
+/*   Updated: 2022/05/09 18:39:49 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int a)
 {
@@ -23,4 +21,3 @@ int	ft_isdigit(int a)
 		return (0);
 	}
 }
-
