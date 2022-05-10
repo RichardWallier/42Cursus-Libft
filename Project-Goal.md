@@ -24,7 +24,7 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed 
 - [V] memcmp
 - [-] strnstr
 - [V] atoi
-- [ ] calloc
+- [V] calloc
 - [V] strdup
 
 - [-] libft.h
