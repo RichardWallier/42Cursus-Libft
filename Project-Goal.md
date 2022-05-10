@@ -14,7 +14,7 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed 
 - [V] memcpy
 - [-] memmove
 - [V] strlcpy
-- [-] strlcat
+- [V] strlcat
 - [V] toupper
 - [V] tolower
 - [V] strchr
@@ -25,6 +25,6 @@ mark the `[-]` on development, `[x]` merged, `[O]` needs review, `[V]` reviewed 
 - [-] strnstr
 - [V] atoi
 - [ ] calloc
-- [-] strdup
+- [V] strdup
 
 - [-] libft.h
