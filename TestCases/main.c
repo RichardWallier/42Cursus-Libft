@@ -25,6 +25,7 @@ int	ft_test_isalnum(void);
 int	ft_test_isprint(void);
 int ft_test_memset(void);
 int ft_test_strlen(void);
+int ft_test_bzero(void);
 
 int main(void)
 {
@@ -35,7 +36,7 @@ int main(void)
 	ft_test_isprint();
 	ft_test_strlen();
 	ft_test_memset();
-	
+	ft_test_bzero();
 }
 
 // Test ft_isalpha
@@ -137,27 +138,55 @@ int ft_test_strlen(void)
 // Test ft_memset
 int ft_test_memset(void)
 {
-	char *str1 = "jaksdhjdkdhdlseieur82373@$#@#%";
-	char *str2 = "jaksdhjdkdhdlseieur82373@$#@#%";
+	char str1[] = "jaksdhjdkdhdlseieur82373@$#@#%";
+	char str2[] = "jaksdhjdkdhdlseieur82373@$#@#%";
 
-	str1 = memset((char *)str1, 95, strlen(str1));
-	str2 = ft_memset((char *)str2, 95, strlen(str2));
-	printf("%s\n", str1);
-	printf("%s\n", str2);
+	memset(str1, 97, 8*sizeof(char));
+	ft_memset(str2, 97, 8*sizeof(char));
 
 	for(int i = 0; i < (int)strlen(str1); i++)
 	{
-		printf("===============================\n");
-		printf("Test fail on ft_memset function: \n");
-		printf("Expected: %s\n", str1);
-		printf("Recived: %s\n", str2);
-		printf("===============================\n");
+		if(str1[i] != str2[i])
+		{
+			printf("===============================\n");
+			printf("Test fail on ft_memset function: \n");
+			printf("Expected: %s\n", str1);
+			printf("Recived: %s\n", str2);
+			printf("===============================\n");
+			return (0);
+		}
 	}
-
+	printf("ft_memset - OK!\n");
 	return (1);
 }
 
 // Test ft_bzero
+int ft_test_bzero(void)
+{
+	char str1[] = "jaksdhjdkdhdlseieur82373@$#@#%";
+	char str2[] = "jaksdhjdkdhdlseieur82373@$#@#%";
+	
+	bzero(str1, strlen(str1));
+	ft_bzero(str2, strlen(str2));
 
+	for (int i = 0; i < 30; i++)
+	{
+		if (str2[i] != str1[i])
+		{
+			printf("===============================\n");
+			printf("Test fail on ft_bzero function: \n");
+			printf("Expected: %s\n", str1);
+			printf("Recived: %s\n", str2);
+			printf("===============================\n");
+			return (0);
+		}
+	}
+	printf("ft_bzero - OK!\n");
+	return (1);
+}
 
 // Test ft_memcpy
+int ft_test_memcpy(void)
+{
+	return (0);
+}
