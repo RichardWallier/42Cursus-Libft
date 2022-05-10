@@ -5,24 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 10:32:36 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/07 02:55:09 by gneves           ###   ########.fr       */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/06 17:29:07 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/06 22:30:56 by vsergio          ###   ########.fr       */
+/*   Created: 2022/05/09 18:29:20 by vsergio           #+#    #+#             */
+/*   Updated: 2022/05/09 21:15:26 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *dest, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 
-	ptr = dest;
-	while (len-- > 0)
+	ptr = s;
+	while (n-- > 0)
 		*ptr++ = 0;
 }

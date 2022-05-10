@@ -6,11 +6,9 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 13:51:40 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/06 22:09:56 by gneves           ###   ########.fr       */
+/*   Updated: 2022/05/09 18:37:28 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalnum(int a)
 {
@@ -24,4 +22,3 @@ int	ft_isalnum(int a)
 		return (0);
 	}
 }
-

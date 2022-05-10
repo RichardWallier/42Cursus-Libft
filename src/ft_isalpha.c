@@ -6,11 +6,9 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 11:29:30 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/06 22:10:11 by gneves           ###   ########.fr       */
+/*   Updated: 2022/05/09 18:38:33 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {
