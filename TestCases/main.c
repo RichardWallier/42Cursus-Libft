@@ -23,6 +23,8 @@ int ft_test_isalpha(void);
 int ft_test_isdigit(void);
 int	ft_test_isalnum(void);
 int	ft_test_isprint(void);
+int ft_test_memset(void);
+int ft_test_strlen(void);
 
 int main(void)
 {
@@ -31,6 +33,8 @@ int main(void)
 	ft_test_isdigit();
 	ft_test_isalnum();
 	ft_test_isprint();
+	ft_test_strlen();
+	ft_test_memset();
 	
 }
 
@@ -50,7 +54,7 @@ int ft_test_isalpha(void)
 }
 
 // Test ft_isdigit
-int ft_test_isdigit(void) 
+int ft_test_isdigit(void)
 {
 	char *str1 = "lk-_=+=':;\\|\\/?,`~!@#$%ajdf93%$#@%()*&73894lkdjsfsd934";
 	for (size_t i = 0; i < strlen(str1); i++) {
@@ -99,9 +103,10 @@ int	ft_test_isprint(void)
 {
 	char *str1 = "lk-_=+=':;\\|\\/?,`~!@#$%ajdf93%$#@%()*&73894lkdjsfsd934";
 	for (size_t i = 0; i < strlen(str1); i++) {
-		if(333 != isprint(str1[i])) {
+		if(ft_isprint(str1[i]) != isprint(str1[i])) {
 			printf("===============================\n");
 			printf("Test Failed on the %zurd char\n", i);
+			printf("Expected: %d\n", isprint(str1[i]));
 			printf("Recived: %d\n", ft_isprint(str1[i]));
 			printf("===============================\n");
 			return (0);
@@ -121,9 +126,9 @@ int ft_test_strlen(void)
 		printf("===============================\n");
 		printf("Test fail on strlen function: \n");
 		printf("Expected: %zu", strlen(str1));
-		printf("Expected: %zu", strlen(str1));
-		return (0);
+		printf("Recived: %zu", strlen(str1));
 		printf("===============================\n");
+		return (0);
 	}
 	printf("ft_strlen - OK!\n");
 	return (1);
@@ -133,13 +138,21 @@ int ft_test_strlen(void)
 int ft_test_memset(void)
 {
 	char *str1 = "jaksdhjdkdhdlseieur82373@$#@#%";
-	char *dest;
-	char *dest2;
-	
-	dest = (char *)malloc(strlen(str1));
-	dest2 = (char *)malloc(strlen(str1));
-	
-	if (ft_memcpy(st))
+	char *str2 = "jaksdhjdkdhdlseieur82373@$#@#%";
+
+	str1 = memset((char *)str1, 95, strlen(str1));
+	str2 = ft_memset((char *)str2, 95, strlen(str2));
+	printf("%s\n", str1);
+	printf("%s\n", str2);
+
+	for(int i = 0; i < (int)strlen(str1); i++)
+	{
+		printf("===============================\n");
+		printf("Test fail on ft_memset function: \n");
+		printf("Expected: %s\n", str1);
+		printf("Recived: %s\n", str2);
+		printf("===============================\n");
+	}
 
 	return (1);
 }
