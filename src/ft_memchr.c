@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/11 09:45:26 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/11 16:01:39 by vsergio          ###   ########.fr       */
+/*   Created: 2022/05/11 14:22:11 by vsergio           #+#    #+#             */
+/*   Updated: 2022/05/11 15:56:20 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char		*dest;
-	const char	*sorc;
-	char		*lastd;
-	const char	*lasts;
+	char	*str;
+	int		i;
 
-	dest = dst;
-	sorc = src;
-	if (dest < sorc)
+	str = (char *)s;
+	i = 0;
+	while (n--)
 	{
-		while (len-- > 0)
-		{
-			*dest++ = *sorc++;
-		}
+		if (str[i] == c)
+			return (&str[i]);
+		else
+			i++;
 	}
-	else
-	{
-		lastd = dest + (len - 1);
-		lasts = sorc + (len - 1);
-		while (len-- > 0)
-			*lastd-- = *lasts--;
-	}
-	return (dst);
+	return (0);
 }

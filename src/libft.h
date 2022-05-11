@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:26:12 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/11 09:45:20 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/11 15:52:56 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ int		ft_tolower(int c);
 void	*ft_calloc(size_t count, size_t size);
 
 void	*ft_memmove(void *dst, const void *src, size_t len);
+
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif
