@@ -1,0 +1,16 @@
+SOURCES	=	ft_atoi.c ft_bzero.c ft_ascii.c ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isprint.c ft_memcmp.c ft_memcpy.c ft_memset.c ft_strchr.c ft_strdup.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strrchr.c ft_substr.c ft_tolower.c ft_toupper.c
+
+OBJECTS	=	${SOURCES:.c.o}
+
+NAME	=	libft.a
+
+CC	=	gcc
+
+AR_RC	=	ar rc
+
+CFLAGS	=	-Wall -Werror -Wextra
+
+${NAME}:	${OBJECTS}
+		${AR_RC} ${NAME} ${OBJECTS}
+
+all: ${NAME}
