@@ -6,24 +6,28 @@ size_t	ft_strlcat(char *dest, char *src, size_t maxlen)
 	size_t	dstlen;
 	unsigned int index;
 
+	if (dstlen <= maxlen)
+		return (maxlen + srclen);
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dest);
 	index = 0;
-	if (dstlen == maxlen)
-		return (maxlen + srclen);
-	if (srclen < (maxlen - dstlen))
-		dest[dstlen + index] = src[index];
-	dest[dstlen + index] = '\0';
-	return (dstlen + srclen);
+	while (src[index] && dstlen < maxlen - 1)
+		dest[dstlen++] = src[index++];
+	dest[dstlen] = '\0';
+	return (ft_strlen(dest) + ft_strlen(&src[index]));
 }
 
-#include <string.h>
+/*
 #include <stdio.h>
-
-int	main(void)
+int main(void)
 {
-	char	str[50] = "Welcome ";
-	char	dest[50] = "Coder";
-	size_t	size = ft_strlcpy(str, dest, 14);
-	printf("dest = %s\n str = %s\n size = %li\n", dest, str, size);
+    char dest[20] = "Welcome ";
+    char str[] = "Coder";
+    size_t rvalue;
+    printf("Before: dest = %s\n", dest);
+    rvalue = ft_strlcat(dest, str, 10);
+    printf("After: dest = %s\n", dest);
+    printf("%zu\n", rvalue);
+    return (0);
 }
+*/
