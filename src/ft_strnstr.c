@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lguedes <lguedes@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 14:10:29 by lguedes           #+#    #+#             */
-/*   Updated: 2022/05/11 14:10:30 by lguedes          ###   ########.fr       */
+/*   Updated: 2022/05/12 10:09:41 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
