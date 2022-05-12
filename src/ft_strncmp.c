@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 10:32:36 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/07 02:55:55 by gneves           ###   ########.fr       */
+/*   Updated: 2022/05/11 20:34:44 by rwallier         ###   ########.fr       */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
@@ -25,9 +25,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (str1[i] == str2[i] && str1[i] != '\0' && str2[i] != '\0' && n-- > 0)
-	{
+	while (str1[i] == str2[i] && str1[i] && str2[i] && n-- > 1)
 		i++;
-	}
 	return (str1[i] - str2[i]);
 }

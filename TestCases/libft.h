@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/11 17:53:53 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/11 20:13:34 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -46,5 +46,11 @@ size_t	ft_strlcat(char *dest, char *src, size_t maxlen);
 int		ft_memcmp(void *str1, void *str2, size_t size);
 
 size_t	ft_strlcpy(char *dest, char *src, size_t destsize);
+
+int	ft_tolower(int arg);
+
+char	*ft_strchr(const char *s, int c);
+
+int	ft_strncmp(const char *str1, const char *str2, size_t n);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lguedes <lguedes@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 00:09:14 by lguedes           #+#    #+#             */
-/*   Updated: 2022/05/11 18:09:32 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/11 21:10:03 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,14 +149,61 @@ void	ft_test_strlcpy(void)
 // Test strlcat
 void	ft_test_strlcat(void)
 {
-	char	ftsrc[] = "Coder";
-	char	ftdest[] = "Welcome";
-	char	originalsrc[] = "Coder";
-	char	originaldest[] = "Welcome";
+    char dest[20] = "Welcome ";
+    char str[] = "Coder";
+    size_t rvalue;
+
+    rvalue = ft_strlcat(dest, str, 10);
+    printf("ft: dest = %s, ftsizeret: %zu | original: Welcome C, sizereturn: 13\n", dest, rvalue);
+}
+
+// Test toupper
+void	ft_test_toupper(void)
+{
+	char	ft = 'a';
+	char	original = 'a';
+	printf("ft: %c | original: %c\n", ft_toupper(ft), toupper(original));
+}
+
+// Test tolower
+void	ft_test_tolower(void)
+{
+	char	ft = 'A';
+	char	original = 'A';
+	printf("ft: %c | original: %c\n", ft_tolower(ft), tolower(original));
+}
+
+void	ft_test_strchr(void)
+{
+	char *str = "Welcome Coder";
+	char to_find = 'C';
+	printf("ft: %s | original: %s\n", ft_strchr(str, to_find), strchr(str, to_find));
+}
 
 
-	ft_strlcat(ftdest, ftsrc, 14);
-	printf("ft: %s | ", ftdest);
+void	ft_test_strncmp(void)
+{
+	char *str1 = "Welcome Coder!b";
+	char *str2 = "Welcome Coder!a";
+
+	printf("ft: %i | original: %i\n", ft_strncmp(str1, str2, 14), strncmp(str1, str2, 14));
+}
+
+void	ft_test_memchr(void)
+{
+	char *str1 = "Welcome Coder!b";
+	char *str2 = "Welcome Coder!a";
+
+	printf("ft: %i | original: %i\n", ft_memcmp(str1, str2, 15), memcmp(str1, str2, 15));
+}
+
+
+void	ft_test_memcmp(void)
+{
+	char *str1 = "Welcome Coder!b";
+	char *str2 = "Welcome Coder!a";
+
+	printf("ft: %i | original: %i\n", ft_memcmp(str1, str2, 15), memcmp(str1, str2, 15));
 }
 
 int main(void)
@@ -199,22 +246,22 @@ int main(void)
 	ft_test_strlcat();
 
 	printf("TOUPPER:\n");
-	// ft_test_toupper();
+	ft_test_toupper();
 
 	printf("TOLOWER:\n");
-	// ft_test_tolower();
+	ft_test_tolower();
 
 	printf("STRCHR:\n");
-	// ft_test_strchr();
+	ft_test_strchr();
 
 	printf("STRNCMP:\n");
-	// ft_test_strncmp();
+	ft_test_strncmp();
 
 	printf("MEMCHR:\n");
-	// ft_test_memchr();
+	ft_test_memchr();
 
 	printf("MEMCMP:\n");
-	// ft_test_memcmp();
+	ft_test_memcmp();
 
 	printf("STRNSTR:\n");
 	// ft_test_strnstr();
