@@ -30,19 +30,11 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 			index_to_return = offset;
 			while(haystack[offset++] == needle[n_offset++])
 			{
-				if(n_offset == (int)strlen(needle))
+				if(n_offset == (int)ft_strlen(needle))
 					return ((char *)&haystack[index_to_return]);
 			}
 		}
 	}
 	return (NULL);
 }
-
-int main(void)
-{
-	char *str = "pato pata palerma pat pal pet pity pitty palerma anerma";
-	char *needle = "palerma";
-	printf("%s\n", ft_strnstr(str,  needle, strlen(str)));
-}
-
 
