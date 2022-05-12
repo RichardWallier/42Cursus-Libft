@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/12 10:39:52 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/12 11:27:45 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -55,6 +55,8 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n);
 
 void	*ft_memmove(void *dest, void *src, size_t len);
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+void	*ft_calloc(size_t count, size_t size);
 
 #endif
