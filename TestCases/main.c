@@ -6,7 +6,7 @@
 /*   By: lguedes <lguedes@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 00:09:14 by lguedes           #+#    #+#             */
-/*   Updated: 2022/05/11 21:10:03 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/12 09:58:38 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,14 +132,24 @@ void	ft_test_memcpy(void)
 }
 
 // Test memmove
+void	ft_test_memmove(void)
+{
+	char	*ftsrc = "Welcome Coder";
+	char	ftdest[15];
+	char	*originalsrc = "Welcome Coder";
+	char	originaldest[15];
+
+	ft_memmove(ftdest, ftsrc, ft_strlen(ftsrc));
+	printf("ft: %s | ", ftdest);
+	memmove(originaldest, originalsrc, ft_strlen(originalsrc));
+	printf("original: %s \n", originaldest);
+}
 
 // Test strlcpy
 void	ft_test_strlcpy(void)
 {
 	char	*ftsrc = "Welcome Coder";
 	char	ftdest[15];
-	char	*originalsrc = "Welcome Coder";
-	char	originaldest[15];
 
 	ft_strlcpy(ftdest, ftsrc, 14);
 	printf("ft: %s size: %zu | ", ftdest, ft_strlcpy(ftdest, ftsrc, 14));
@@ -237,7 +247,7 @@ int main(void)
 	ft_test_memcpy();
 
 	printf("MEMMOVE:\n");
-	// ft_test_memmove();
+	ft_test_memmove();
 
 	printf("STRLCPY:\n");
 	ft_test_strlcpy();

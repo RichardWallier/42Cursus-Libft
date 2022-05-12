@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/11 20:13:34 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/12 09:51:11 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -47,10 +47,12 @@ int		ft_memcmp(void *str1, void *str2, size_t size);
 
 size_t	ft_strlcpy(char *dest, char *src, size_t destsize);
 
-int	ft_tolower(int arg);
+int		ft_tolower(int arg);
 
 char	*ft_strchr(const char *s, int c);
 
-int	ft_strncmp(const char *str1, const char *str2, size_t n);
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
+
+void	*ft_memmove(void *dest, void *src, size_t len);
 
 #endif
