@@ -6,7 +6,7 @@
 /*   By: lguedes <lguedes@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 00:09:14 by lguedes           #+#    #+#             */
-/*   Updated: 2022/05/12 11:41:02 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/12 12:26:57 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,6 +251,28 @@ void	ft_test_strdup(void)
 	printf("original: %s\n\n", originaldest);
 }
 
+// Test substr
+void	ft_test_substr(void)
+{
+	char	*str = "Welcome Coder from 42";
+	char	*substr;
+	unsigned int		start = 5;
+
+	substr = ft_substr(str, start, ft_strlen(str));
+	printf("ft: %s | expected: me Coder from 42\n\n", substr);
+}
+
+// Test strjoin
+void	ft_test_strjoin(void)
+{
+	char *s1 = "Welcoime ";
+	char *s2 = "Coder";
+	char *newstr;
+
+	newstr = ft_strjoin(s1, s2);
+	printf("ft: %s | ", newstr);
+}
+
 int main(void)
 {
 	printf("Starting tests:\n");
@@ -322,4 +344,12 @@ int main(void)
 
 	printf("STRDUP:\n");
 	ft_test_strdup();
+	
+	printf("Additional functions\n");
+
+	printf("ft_substr:\n");
+	ft_test_substr();
+
+	printf("ft_strjoin:\n");
+	ft_test_strjoin();
 }

@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/06 20:37:02 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/12 12:02:49 by rwallier         ###   ########.fr       */
+/*   Created: 2022/05/12 11:59:05 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/12 12:30:32 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	index;
-	size_t	srcsize;
+	char	*newstr;
+	size_t	fullsize;
 
-	srcsize = ft_strlen(src);
-	index = 0;
-	while ((dest[index] || src[index]) && index < destsize)
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	dest[index] = '\0';
-	return (srcsize);
+	fullsize = ft_strlen(s1) + ft_strlen(s2);
+	newstr = (char *)malloc(fullsize * sizeof(char));
+
+	ft_strlcpy(newstr, s1, ft_strlen(s1));
+	ft_strlcat(newstr, s2, fullsize + 1);
+	return (newstr);
 }

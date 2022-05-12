@@ -1,6 +1,5 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
+/*                                                                            */ /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
@@ -12,7 +11,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t maxlen)
+size_t	ft_strlcat(char *dest, const char *src, size_t maxlen)
 {
 	unsigned int	dsize;
 	unsigned int	index;
