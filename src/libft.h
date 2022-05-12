@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/12 12:23:22 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/12 20:25:53 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -62,5 +62,9 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
 
 char	*ft_strjoin(char const *s1, char const *s2);
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
