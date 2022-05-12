@@ -14,7 +14,7 @@ CFLAGS	= -Wall -Wextra -Werror
 AR_RC 	= ar rc
 
 .c.o:
-			${CC} ${CFLAGS} -I ${HEADER} -c $< -o ${<:.c=.o}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
 			${AR_RC} ${NAME} ${OBJS} 
