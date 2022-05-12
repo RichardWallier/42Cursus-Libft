@@ -6,7 +6,7 @@
 /*   By: lguedes <lguedes@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:35:28 by lguedes           #+#    #+#             */
-/*   Updated: 2022/05/12 10:00:51 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:29:24 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	*ft_memmove(void *dest, void *src, size_t len)
 	}
 	else
 	{
-		d_end = d + (len-1);
-		s_end = s + (len -1);
+		d_end = d + (len - 1);
+		s_end = s + (len - 1);
 		while (len--)
 			*d_end-- = *s_end--;
 	}

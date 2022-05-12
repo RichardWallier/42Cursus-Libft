@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/12 19:30:09 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/12 19:30:41 by rwallier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_itoa(int n)
@@ -11,21 +23,10 @@ char	*ft_itoa(int n)
 	{
 		character = ft_atoi(n + 48);
 		ft_strjoin(ret, character);
-		return (ret) ;
+		return (ret);
 	}
-	// else
-	// 	ft_itoa(n / 10);
-	// ft_itoa(n % 10);
-
+	else
+		ft_itoa(n / 10);
+	ft_itoa(n % 10);
 	return (ret);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	char	*nbr;
-
-	nbr = ft_itoa(8);
-
-	printf("test: %s\n", nbr);
 }
