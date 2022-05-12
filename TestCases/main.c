@@ -6,7 +6,7 @@
 /*   By: lguedes <lguedes@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 00:09:14 by lguedes           #+#    #+#             */
-/*   Updated: 2022/05/12 09:58:38 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/12 10:41:36 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,6 +216,14 @@ void	ft_test_memcmp(void)
 	printf("ft: %i | original: %i\n", ft_memcmp(str1, str2, 15), memcmp(str1, str2, 15));
 }
 
+void	ft_test_strnstr(void)
+{
+	char *str = "Welcome Coder from 42";
+	char *to_find = "Coder";
+
+	printf("ft: %s | original: %s\n", ft_strnstr(str, to_find, ft_strlen(str)), strnstr(str, to_find, strlen(str)));
+}
+
 int main(void)
 {
 	printf("Starting tests:\n");
@@ -274,7 +282,7 @@ int main(void)
 	ft_test_memcmp();
 
 	printf("STRNSTR:\n");
-	// ft_test_strnstr();
+	ft_test_strnstr();
 
 	printf("ATOI:\n");
 	ft_test_atoi();
