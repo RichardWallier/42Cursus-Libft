@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/13 12:37:36 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/13 13:48:11 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -29,21 +29,21 @@ int		ft_isprint(int c);
 
 size_t	ft_strlen(const char *str);
 
-void	*ft_memset(void *dest, int c, unsigned int offset);
+void	*ft_memset(void *dest, int c, size_t offset);
 
 void	ft_bzero(void *dest, size_t len);
 
-void	*ft_memcpy(void *dest, void *src, size_t len);
+void	*ft_memcpy(void *dest, const void *src, size_t len);
 
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 
 char	*ft_strdup(char *s1);
 
-char	ft_toupper(char c);
+int		ft_toupper(int arg);
 
 size_t	ft_strlcat(char *dest, const char *src, size_t maxlen);
 
-int		ft_memcmp(void *str1, void *str2, size_t size);
+int		ft_memcmp(const void *str1, const void *str2, size_t size);
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 
@@ -53,7 +53,7 @@ char	*ft_strchr(const char *s, int c);
 
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 
-void	*ft_memmove(void *dest, void *src, size_t len);
+void	*ft_memmove(void *dest, const void *src, size_t len);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
