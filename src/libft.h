@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:26:12 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/13 15:02:48 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/13 17:58:29 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
+
 
 int		ft_isalpha(int c);
 
@@ -66,5 +68,9 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 char	*ft_strtrim(char const *s1, char const *set);
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
