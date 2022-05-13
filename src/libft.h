@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/13 11:19:18 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/13 12:37:36 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -70,5 +70,9 @@ void	ft_putstr_fd(char *s, int fd);
 char	*ft_strtrim(char const *s1, char const *set);
 
 char	*ft_itoa(int n);
+
+void	ft_putnbr_fd(int n, int fd);
+
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
