@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:11:03 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/09 17:11:05 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/13 13:23:59 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(char *s1)
 {
 	void	*new;
-	int		len;
+	size_t	len;
 
 	len = ft_strlen(s1);
 	new = (char *)malloc(len * sizeof(char *));

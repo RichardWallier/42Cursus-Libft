@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
+/*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/07 02:26:49 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/07 02:31:39 by vsergio          ###   ########.fr       */
+/*   Created: 2022/05/13 13:42:17 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/13 13:43:59 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	ft_tolower(int arg)
 {
-	if (arg >= 65 && arg <= 90)
-	{
+	if (arg >= 'A' && arg <= 'Z')
 		return (arg + 32);
-	}
 	return (arg);
 }

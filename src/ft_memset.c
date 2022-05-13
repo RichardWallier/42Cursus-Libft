@@ -6,13 +6,13 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:09:21 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/09 17:09:24 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/13 13:19:43 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *dest, int c, unsigned int offset)
+void	*ft_memset(void *dest, int c, size_t offset)
 {
 	unsigned char	*pointer;
 

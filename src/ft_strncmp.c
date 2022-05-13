@@ -3,16 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
+/*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 10:32:36 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/11 20:34:44 by rwallier         ###   ########.fr       */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/06 17:29:07 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/06 22:30:56 by vsergio          ###   ########.fr       */
+/*   Created: 2022/05/13 13:36:13 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/13 13:36:14 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

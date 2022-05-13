@@ -6,16 +6,16 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 22:16:18 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/06 22:16:21 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/13 13:49:04 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(void *str1, void *str2, size_t size)
+int	ft_memcmp(const void *str1, const void *str2, size_t size)
 {
-	char	*s1;
-	char	*s2;
+	const char	*s1;
+	const char	*s2;
 
 	s1 = (char *)str1;
 	s2 = (char *)str2;
