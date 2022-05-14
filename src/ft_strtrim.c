@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/12 12:28:59 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/13 13:23:13 by vsergio          ###   ########.fr       */
+/*   Created: 2022/05/13 09:20:23 by vsergio           #+#    #+#             */
+/*   Updated: 2022/05/13 13:53:51 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char			*substr;
-	unsigned int	i_start;
-	unsigned int 	i;
+	char	*str1;
+	int		i_start;
+	int		i_end;
 
-	i = 0;
+	i_end = ft_strlen(s1) - 1;
 	i_start = 0;
-	substr = (char *)malloc(len + 1);
-	if (substr == NULL)
-		return (NULL);
-	while (s[i] != '\0')
+	while (s1[i_start] != '\0' && ft_strchr(set, s1[i_start]))
 	{
-		if (i >= start && i_start < len)
-			substr[i_start++] = s[i];
-		i++;
+		i_start++;
 	}
-	substr[i_start] = '\0';
-	return (substr);
+	while (s1[i_end] != '\0' && ft_strchr(set, s1[i_end]) && i_end > i_start)
+	{
+		i_end--;
+	}
+	str1 = ft_substr(s1, i_start, i_end - i_start + 1);
+	return (str1);
 }

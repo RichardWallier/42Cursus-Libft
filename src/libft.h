@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:26:12 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/11 15:52:56 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/13 17:58:29 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
+
 
 int		ft_isalpha(int c);
 
@@ -60,5 +62,15 @@ void	*ft_calloc(size_t count, size_t size);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
 void	*ft_memchr(const void *s, int c, size_t n);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+char	*ft_strtrim(char const *s1, char const *set);
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
