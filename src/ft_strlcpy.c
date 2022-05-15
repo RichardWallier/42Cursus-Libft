@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 20:37:02 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/13 13:31:46 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/15 16:39:38 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t maxsize)
 {
-	size_t	index;
 	size_t	srcsize;
 
 	srcsize = ft_strlen(src);
-	index = 0;
-	while ((dest[index] || src[index]) && index < maxsize)
+	if (srcsize + 1 < maxsize)
+		ft_memcpy(dest, src, srcsize + 1);
+	else if (maxsize != 0)
 	{
-		dest[index] = src[index];
-		index++;
+		ft_memcpy(dest, src, maxsize - 1);
+		dest[maxsize - 1] = '\0';
 	}
-	dest[index] = '\0';
 	return (srcsize);
 }

@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 17:01:10 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/15 18:55:00 by rwallier         ###   ########.fr       */
+/*   Created: 2022/05/09 17:11:31 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/12 10:11:38 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+size_t	ft_strlen(const char *str)
 {
-	char	*ret;
-	int		strsize;
+	size_t	index;
 
-	strsize = (int)ft_strlen(str);
-	ret = (char *)str + strsize;
-	while (strsize-- >= 0)
-	{
-		if (*ret == (char)c)
-			return (ret);
-		ret--;
-	}
-	return (NULL);
+	index = 0;
+	while (str[index])
+		index++;
+	return (index);
 }

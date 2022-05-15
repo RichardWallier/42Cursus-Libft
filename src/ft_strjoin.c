@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 11:59:05 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/13 13:48:35 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/15 20:23:41 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*newstr;
 	size_t	fullsize;
 
-	fullsize = ft_strlen(s1) + ft_strlen(s2);
+	if (!s1 || !s2)
+		return (NULL);
+	fullsize = (ft_strlen(s1) + ft_strlen(s2)) + 1;
 	newstr = (char *)malloc(fullsize * sizeof(char));
 	if (!newstr)
 		return (NULL);
-	ft_strlcpy(newstr, s1, ft_strlen(s1));
-	ft_strlcat(newstr, s2, fullsize + 1);
+	ft_strlcpy(newstr, s1, ft_strlen(s1) + 1);
+	ft_strlcpy(&newstr[ft_strlen(s1)], s2, ft_strlen(s2) + 1);
 	return (newstr);
 }

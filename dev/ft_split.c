@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 14:18:09 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/13 19:01:33 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/15 19:58:04 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,16 @@ int	set_rows(char *temp, char c)
 	return (rows + 1);
 }
 
+#include <stdio.h>
 void	set_ret(char **ret, char *temp, char c, int rows)
 {
 	int	index;
 
 	index = ft_strlen(temp) - 1;
-	rows = 6;
+	rows -= 1;
 	while (temp[index])
 	{
+		printf("index: %i\n", index);
 		if (temp[index] == c || index == 0)
 		{
 			if (temp[index - 1] == c)
@@ -81,25 +83,14 @@ char	**ft_split(char const *s, char c)
 	char	**ret;
 	char	*temp;
 	int		rows;
-	int		cols;
-	int		index;
 
 	rows = set_rows((char *)s, c);
 	ret = (char **)malloc(rows * sizeof(char *));
-	index = 0;
-	while (index < rows)
-	{
-		if (!ret[index])
-		{
-			
-		}
-	}
 	if(!ret)
+		return (NULL);
 	temp = ft_strdup((char *)s);
-	index = ft_strlen(s) - 1;
 	set_ret(ret, temp, c, rows);
-	ret = trim_all_strings(ret, c);
-	free(temp);
-	free(ret);
+	printf("after setret\n");
+	// ret = trim_all_strings(ret, c);
 	return (ret);
 }

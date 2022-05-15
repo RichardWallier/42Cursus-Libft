@@ -1,22 +1,70 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/02/28 12:34:58 by jtoty             #+#    #+#             */
+/*   Updated: 2022/05/15 20:01:13 by rwallier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-int main (void)
+static void			ft_print_result(char const *s)
 {
-	ft_putendl_fd("my function", 1);
-	char *s2 = "@Welcome@@Coder@from@42@Rio@@@de@Janeiro";
-	char **ret2;
+	int		len;
 
-	ret2 = ft_split(s2, '@');
-	for (int row = 0; ret2[row]; row++)
-		ft_putendl_fd(ret2[row], 1);
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
 
-	ft_putendl_fd("", 1);
-	ft_putendl_fd("warley function", 1);
-	char *s = "@Welcome@@Coder@from@42@Rio@@@de@Janeiro";
-	char **ret;
+static void			ft_print_tabstr(char **tabstr)
+{
+	int		i;
 
-	ret = ft_split2(s, '@');
-	for (int row = 0; ret[row]; row++)
-		ft_putendl_fd(ret[row], 1);
+	i = 0;
+	while (tabstr[i] != NULL)
+	{
+		ft_print_result(tabstr[i]);
+		write(1, "\n", 1);
+		free(tabstr[i]);
+		i++;
+	}
+	free(tabstr);
+}
+
+static void			check_split(char *s, char c)
+{
+	char	**tabstr;
+
+	if (!(tabstr = ft_split(s, c)))
+		ft_print_result("NULL");
+	else
+		ft_print_tabstr(tabstr);
+}
+
+int					main(int argc, const char *argv[])
+{
+	int		arg;
+
+	alarm(5);
+	if (argc == 1)
+		return (0);
+	if ((arg = atoi(argv[1])) == 1)
+		check_split("          ", ' ');
+	else if (arg == 2)
+		check_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	else if (arg == 3)
+		check_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
+	else if (arg == 4)
+		check_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'i');
+	else if (arg == 5)
+		check_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.", 'z');
 	return (0);
 }

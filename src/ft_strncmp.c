@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:36:13 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/13 13:36:14 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/15 18:07:49 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int	i;
+	size_t	index;
 
-	i = 0;
+	index = 0;
 	if (n == 0)
 		return (0);
-	while (str1[i] == str2[i] && str1[i] && str2[i] && n-- > 1)
-		i++;
-	return (str1[i] - str2[i]);
+	while ((str1[index] || str2[index]) && index < n)
+	{
+		if (str1[index] && !str2[index])
+			return (1);
+		if (str1[index] != str2[index])
+			return (str1[index] - str2[index]);
+		index++;
+	}
+	return (0);
 }

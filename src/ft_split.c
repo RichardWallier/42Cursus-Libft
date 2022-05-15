@@ -6,43 +6,88 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 14:18:09 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/13 14:41:25 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/15 20:05:05 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+static int	set_rows(char *temp, char c)
 {
-	char	**ret;
-	int		rows;
-	int		cols;
-	int		index;
+	int	index;
+	int	rows;
 
-	rows = 5;
-	cols = 50;
-	ret = (char **)malloc(rows * sizeof(char *));
-	while (index < rows)
-		ret[index++] = (char *)malloc(cols * sizeof(char));
-
-	index = ft_strlen(s) - 1;
+	index = ft_strlen(temp) - 1;
 	rows = 0;
-	while (s[index])
+	while (temp[index])
 	{
-		if (s[index] == c)
-			ft_strlcat(ret[rows++], &s[index], ft_strlen(&s[index]));
+		while (temp[index] == c || index == 0)
+		{
+			if (temp[index - 1] == c)
+				index--;
+			else
+				rows++;
+			index--;
+		}
 		index--;
+	}
+	return (rows + 1);
+}
+
+static void	set_ret(char **ret, char *temp, char c, int rows)
+{
+	int	index;
+
+	index = ft_strlen(temp) - 1;
+	rows -= 1;
+	while (temp[index])
+	{
+		if (temp[index] == c || index == 0)
+		{
+			if (temp[index - 1] == c)
+				index--;
+			if (index == 0)
+			{
+				ret[rows] = ft_strdup(&temp[index]);
+				ft_bzero(&temp[index--], ft_strlen(ret[rows]));
+				rows--;
+			}
+			else
+			{
+				ret[rows] = ft_strdup(&temp[index + 1]);
+				ft_bzero(&temp[index--], ft_strlen(ret[rows]));
+				rows--;
+			}
+		}
+		index--;
+	}
+}
+
+static char	**trim_all_strings(char **ret, char c)
+{
+	int	index;
+
+	index = 0;
+	while (ret[index])
+	{
+		ret[index] = ft_strtrim(ret[index], &c);
+		index++;
 	}
 	return (ret);
 }
 
-int main (void)
+char	**ft_split(char const *s, char c)
 {
-	char *s = "Welcome@Coder@from@42";
-	char **ret;
+	char	**ret;
+	char	*temp;
+	int		rows;
 
-	ret = ft_split(s, '@');
-	for (int row = 0; ret[row]; row++)
-		ft_putstr_fd(ret[row], 1);
-	return (0);
+	rows = set_rows((char *)s, c);
+	ret = (char **)malloc(rows * sizeof(char *));
+	if (!ret)
+		return (NULL);
+	temp = ft_strdup((char *)s);
+	set_ret(ret, temp, c, rows);
+	ret = trim_all_strings(ret, c);
+	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 10:11:06 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/12 19:28:16 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/15 18:28:57 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,16 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		offset;
-	int		n_offset;
-	size_t	index_to_return;
+	size_t	needle_size;
 
-	offset = 0;
-	while (haystack[offset++] && offset < (int)len)
+	needle_size = ft_strlen(needle);
+	if (!needle_size)
+		return ((char *)haystack);
+	while (*haystack && needle_size <= len--)
 	{
-		n_offset = 0;
-		if (haystack[offset] == needle[n_offset])
-		{
-			index_to_return = offset;
-			while (haystack[offset++] == needle[n_offset++])
-			{
-				if (n_offset == (int)ft_strlen(needle))
-					return ((char *)&haystack[index_to_return]);
-			}
-		}
+		if (!ft_memcmp(haystack, needle, needle_size))
+			return ((char *)haystack);
+		haystack++;
 	}
 	return (NULL);
 }
