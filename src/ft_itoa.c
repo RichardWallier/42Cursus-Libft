@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:30:09 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/13 11:18:26 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/16 07:57:19 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char	*ft_itoa(int n)
 
 	nbr = set_nbr(n);
 	ret_lenght = set_ret_lenght(nbr);
+	if (n == 0)
+		return (ft_strdup("0"));
 	if (n < 0)
 	{
 		ret = (char *)malloc(ret_lenght * sizeof(char) + 1 + 1);

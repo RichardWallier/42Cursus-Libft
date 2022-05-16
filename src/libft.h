@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/15 20:02:50 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/16 08:09:58 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -78,5 +78,7 @@ char	**ft_split(char const *s, char c);
 void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putendl_fd(char *s, int fd);
+
+void	*ft_memchr(const void *src, int c, size_t length);
 
 #endif
