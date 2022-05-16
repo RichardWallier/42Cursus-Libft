@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 15:16:15 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/16 15:37:50 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/16 15:52:46 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	ft_putendl_fd(char *s, int fd)
 	if (fd < 0 || s == NULL)
 		return ;
 	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', 1);
+	write(fd, "\n", 1);
 }
