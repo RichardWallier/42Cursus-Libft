@@ -6,88 +6,84 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 14:18:09 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/15 20:05:05 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/16 11:32:03 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	set_rows(char *temp, char c)
-{
-	int	index;
-	int	rows;
+size_t	set_end(char const *s, char c);
 
-	index = ft_strlen(temp) - 1;
-	rows = 0;
-	while (temp[index])
-	{
-		while (temp[index] == c || index == 0)
-		{
-			if (temp[index - 1] == c)
-				index--;
-			else
-				rows++;
-			index--;
-		}
-		index--;
-	}
-	return (rows + 1);
-}
+size_t	set_rows(char const *s, char c);
 
-static void	set_ret(char **ret, char *temp, char c, int rows)
-{
-	int	index;
-
-	index = ft_strlen(temp) - 1;
-	rows -= 1;
-	while (temp[index])
-	{
-		if (temp[index] == c || index == 0)
-		{
-			if (temp[index - 1] == c)
-				index--;
-			if (index == 0)
-			{
-				ret[rows] = ft_strdup(&temp[index]);
-				ft_bzero(&temp[index--], ft_strlen(ret[rows]));
-				rows--;
-			}
-			else
-			{
-				ret[rows] = ft_strdup(&temp[index + 1]);
-				ft_bzero(&temp[index--], ft_strlen(ret[rows]));
-				rows--;
-			}
-		}
-		index--;
-	}
-}
-
-static char	**trim_all_strings(char **ret, char c)
-{
-	int	index;
-
-	index = 0;
-	while (ret[index])
-	{
-		ret[index] = ft_strtrim(ret[index], &c);
-		index++;
-	}
-	return (ret);
-}
+char	**free_all(char **result, size_t size);
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ret;
-	char	*temp;
-	int		rows;
+	char	**result;
+	size_t	rows;
+	size_t	index;
+	size_t	end;
 
-	rows = set_rows((char *)s, c);
-	ret = (char **)malloc(rows * sizeof(char *));
-	if (!ret)
+	if (!s)
 		return (NULL);
-	temp = ft_strdup((char *)s);
-	set_ret(ret, temp, c, rows);
-	ret = trim_all_strings(ret, c);
-	return (ret);
+	rows = set_rows(s, c);
+	result = (char **)malloc(sizeof(char *) * (rows + 1));
+	if (!result)
+		return (NULL);
+	index = 0;
+	while (index < rows)
+	{
+		while (*s && *s == c)
+			s++;
+		end = set_end(s, c);
+		result[index] = ft_substr(s, 0, end);
+		if (!result[index])
+			return (free_all(result, index));
+		s += end + 1;
+		index++;
+	}
+	result[index] = NULL;
+	return (result);
+}
+
+char	**free_all(char **result, size_t size)
+{
+	size_t	index;
+
+	index = 0;
+	while (index < size)
+		free(result[index++]);
+	free(result);
+	return (NULL);
+}
+
+size_t	set_end(char const *s, char c)
+{
+	size_t	end;
+
+	end = 0;
+	while (s[end] && s[end] != c)
+		end++;
+	return (end);
+}
+
+size_t	set_rows(char const *s, char c)
+{
+	size_t	index;
+	size_t	rows;
+
+	rows = 0;
+	index = 0;
+	while (*s && *s == c)
+		s++;
+	while (s[index])
+	{
+		if (index == 0)
+			rows++;
+		else if (s[index - 1] == c && s[index] != c)
+			rows++;
+		index++;
+	}
+	return (rows);
 }

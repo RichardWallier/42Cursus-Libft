@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 13:40:48 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/16 11:06:14 by rwallier         ###   ########.fr       */
+/*   Created: 2022/05/16 13:33:51 by rwallier          #+#    #+#             */
+/*   Updated: 2022/05/16 13:44:03 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *str, unsigned int start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*ret;
-	size_t		sz_temp;
-	size_t		sz_str;
+	size_t			index;
+	size_t			s_size;
+	unsigned char	*result;
 
-	ret = (char *)malloc(len);
-	if (!ret)
+	if (!s)
 		return (NULL);
-	sz_temp = 0;
-	sz_str = 0;
-	while (str[sz_str] != '\0')
+	s_size = ft_strlen(s);
+	index = 0;
+	result = (unsigned char *)malloc(s_size * sizeof(char));
+	if (!result)
+		return (NULL);
+	while (index < s_size)
 	{
-		if (sz_str >= start && sz_temp < len)
-			ret[sz_temp++] = str[sz_str];
-		sz_str++;
+		result[index] = (f)(index, s[index]);
+		index++;
 	}
-	ret[sz_temp] = '\0';
-	return (ret);
+	return ((char *)result);
 }

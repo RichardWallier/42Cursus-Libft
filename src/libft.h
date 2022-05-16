@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 16:34:25 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/16 08:09:58 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/16 13:42:13 by rwallier         ###   ########.fr       */
 /*   Updated: 2022/05/04 14:33:16 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -80,5 +80,9 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
 
 void	*ft_memchr(const void *src, int c, size_t length);
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+void	ft_striteri(char const *s, void (*f)(unsigned int, char *));
 
 #endif
