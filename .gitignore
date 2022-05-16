@@ -1,3 +1,5 @@
 a.out
 libft.h.gch
 *.o
+.DS_Store
+Libftest
