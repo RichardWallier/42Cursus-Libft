@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 10:02:41 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/16 19:30:40 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/16 19:35:12 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ char	*ft_itoa(int n)
 	nbr = n;
 	i = len(nbr);
 	str = (char *) malloc(sizeof(char) * (i + 1));
-	str[i--] = '\0';
 	if (str == NULL)
 		return (NULL);
+	str[i--] = '\0';
 	if (nbr == 0)
 		if_zero(str);
 	if (nbr < 0)
