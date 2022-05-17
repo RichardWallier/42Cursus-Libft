@@ -6,7 +6,7 @@
 /*   By: vsergio <vsergio@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:26:12 by vsergio           #+#    #+#             */
-/*   Updated: 2022/05/16 19:43:40 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/17 10:38:35 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,7 @@ void	ft_putendl_fd(char *s, int fd);
 char	*ft_itoa(int n);
 
 void	ft_striteri(char *s, void(*f)(unsigned int, char*));
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
