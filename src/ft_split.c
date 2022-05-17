@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-#include <stdio.h>
 
 static size_t count_splits(char *s, char c);
 static size_t sub_len(char *str, char sep);
@@ -27,20 +25,19 @@ char **ft_split(char const *s, char c)
 
 	s_buff = (char *)s;
 	splits = count_splits(s_buff, c); 
-
-	// Alocate memory for each subtring char * and define it's limit
-	// printf("%d", splits);
 	final = malloc(sizeof(char *) * (splits + 1));
+	if(!final)
+		return (NULL);
 	final[splits] = NULL;
-
-	//Make space for each char inside final[i]
 	offset = 0;
 	while(offset < splits)
 	{
 		while(*s_buff && *s_buff == c)
 			s_buff++;
 		sub =  (int)sub_len(s_buff, c);
-		final[offset++] = ft_substr(s_buff, 0, sub);
+		final[offset] = ft_substr(s_buff, 0, sub);
+		if(!final[offset++])
+			return (NULL);
 		s_buff += sub;
 	}
 	return(final);
@@ -72,23 +69,7 @@ static size_t sub_len(char *str, char sep)
 	size_t len;
 	
 	len = 0;
-	while(*str && *str != sep)
-	{
-		str++;
+	while(str[len] && str[len] != sep)
 		len++;
-	}
 	return (len);
-}
-
-int main(void)
-{
-	char *str = "     Split    kidbengala please    ldskfjasklfjsadkl     ";
-	char sep = ' ';
-	char **res;
-	int i = 0;
-	res = ft_split(str, sep);
-	
-	// printf("Opa");
-	while(res[i])
-		printf("%s\n", res[i++]);
 }
