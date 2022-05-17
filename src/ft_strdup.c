@@ -6,7 +6,7 @@
 /*   By: lguedes <lguedes@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 21:42:59 by lguedes           #+#    #+#             */
-/*   Updated: 2022/05/09 23:42:08 by vsergio          ###   ########.fr       */
+/*   Updated: 2022/05/17 10:43:47 by vsergio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,20 @@
 
 char	*ft_strdup(char *s1)
 {
-	void	*new;
+	char	*new;
 	int		len;
+	int		i;
 
+	i = 0;
 	len = ft_strlen(s1);
-	new = (char *)malloc(len * sizeof(char *));
+	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (new == NULL)
 		return (NULL);
-	return (ft_memcpy(new, s1, len));
+	while (s1[i] != '\0')
+	{
+		new[i] = s1[i];
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
 }
