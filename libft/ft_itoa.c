@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:30:09 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/18 11:35:41 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/18 12:04:06 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,14 +85,10 @@ char	*ft_itoa(int n)
 		if (!ret)
 			return (NULL);
 		ret[0] = '-';
-		nbr = n * -1;
 		ret_lenght++;
 	}
 	else
-	{
 		ret = (char *)ft_calloc(ret_lenght + 1, sizeof(char));
-		nbr = n;
-	}
 	if (!ret)
 		return (NULL);
 	ft_writenbr(nbr, ret, ret_lenght + 1);
