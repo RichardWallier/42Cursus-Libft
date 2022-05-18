@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 13:40:48 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/17 10:43:48 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/18 12:00:25 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	size_t		sz_temp;
 	size_t		sz_str;
 
-	ret = (char *)malloc(len + 1);
+	if (!str)
+		return (NULL);
+	if (len > ft_strlen(str))
+		ret = (char *)malloc(ft_strlen(str) + 1);
+	else
+		ret = (char *)malloc(len + 1);
 	if (!ret)
 		return (NULL);
 	sz_temp = 0;

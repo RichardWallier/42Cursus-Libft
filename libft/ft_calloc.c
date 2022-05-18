@@ -6,7 +6,7 @@
 /*   By: rwallier <rwallier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 11:25:05 by rwallier          #+#    #+#             */
-/*   Updated: 2022/05/12 11:25:08 by rwallier         ###   ########.fr       */
+/*   Updated: 2022/05/18 11:55:03 by rwallier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void		*ptr;
 	size_t		delete;
 
+	if (!count)
+		return (NULL);
 	ptr = malloc(count * size);
 	if (ptr == NULL)
 		return (NULL);
