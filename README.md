@@ -1,4 +1,4 @@
-# 42Cursus-Libft
+# Libft
 ## My version of libc with more extra utility functions
 ### Usage
 ``make`` without bonus functions.
